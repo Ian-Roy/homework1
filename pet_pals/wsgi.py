@@ -1,4 +1,4 @@
-import os
-from flaskapp import create_app
+from .app import app
 
-app = create_app(os.getenv("FLASK_CONFIG", default="config.DevelopmentConfig"))
+if __name__ == "__main__":
+    app.run()
